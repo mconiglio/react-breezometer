@@ -4,10 +4,12 @@ import Result from './Result';
 const ResultList = ({ results }) => (
   <table>
     <thead>
-      <th>Country</th>
-      <th>Result description</th>
-      <th>AQI</th>
-      <th>Color</th>
+      <tr>
+        <th>Country</th>
+        <th>Result description</th>
+        <th>AQI</th>
+        <th>Color</th>
+      </tr>
     </thead>
     <tbody>
       {results.map(result => {

@@ -1,17 +1,22 @@
+import * as types from '../actions/actionTypes';
+
 const requestState = (state = { isLoading: false, error: '' }, action) => {
   switch (action.type) {
-    case 'FETCH_RESULT_FAILURE':
+    case types.FETCH_RESULT_FAILURE:
       return {
+        ...state,
         isLoading: action.isLoading,
         error: action.error
       };
-    case 'FETCH_RESULT_SUCCESS':
+    case types.FETCH_RESULT_SUCCESS:
       return {
+        ...state,
         isLoading: action.isLoading,
         error: action.error
       };
-    case 'FETCH_RESULT_REQUEST':
+    case types.FETCH_RESULT_REQUEST:
       return {
+        ...state,
         isLoading: action.isLoading,
         error: action.error
       };
